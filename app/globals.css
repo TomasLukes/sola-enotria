@@ -14,4 +14,20 @@
   .spacing-section {
     @apply mb-16 md:mb-32 lg:mb-40;
   }
+
+  .heading {
+    @apply text-3xl md:text-5xl font-bold tracking-tighter;
+  }
+
+  .subheading {
+    @apply text-lg md:text-xl font-semibold tracking-tighter;
+  }
+
+  .paragraph {
+    @apply text-sm md:text-base font-normal;
+  }
+
+  .paragraph-small {
+    @apply text-xs md:text-sm font-normal;
+  }
 }
