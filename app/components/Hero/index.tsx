@@ -22,7 +22,7 @@ const Hero = ({ className }: IClassName): ReactElement => {
       )}
     >
       <div className="container-base flex flex-col md:flex-row gap-8">
-        <div className="w-full md:w-1/2 flex flex-col gap-4 justify-start md:pt-24 z-50">
+        <div className="w-full md:w-1/2 flex flex-col gap-4 justify-start md:pt-24 z-40">
           <h1 className="heading leading-tight">Nejlepší pizza v Bohnicích</h1>
           <p className="paragraph">
             Přijďte do Sola Enotria ochutnat autentickou italskou kuchyni. Naše recepty s
@@ -55,7 +55,7 @@ const Hero = ({ className }: IClassName): ReactElement => {
                 />
               </div>
             </div>
-            <div className="relative w-[300px] h-[300px] md:w-[750px] md:h-[750px] flex-shrink-0 animate-fade-in">
+            <div className="relative w-[300px] h-[300px] md:w-[750px] md:h-[750px] flex-shrink-0 fade-in-delayed">
               <Image
                 fill
                 priority
