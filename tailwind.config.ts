@@ -15,11 +15,14 @@ const config: Config = {
         'light-primary': '#FFFFFF',
         'light-secondary': '#E2E2E2',
       },
+      backgroundImage: {
+        grain: "url('/assets/backgrounds/grainy-texture.webp')",
+      },
       animation: {
-        'into-view-desktop': 'into-view-desktop 1s linear',
-        'into-view-mobile': 'into-view-mobile 1s linear',
+        'into-view-desktop': 'into-view-desktop 0.7s linear',
+        'into-view-mobile': 'into-view-mobile 0.7s linear',
         'fade-down': 'fade-down 0.5s',
-        'fade-in': 'fade-in 0.75s ease-in-out',
+        'fade-in': 'fade-in',
       },
       keyframes: {
         'into-view-desktop': {

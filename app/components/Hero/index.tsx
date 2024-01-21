@@ -17,7 +17,7 @@ const Hero = ({ className }: IClassName): ReactElement => {
   return (
     <section
       className={clsx(
-        'h-[90vh] bg-gradient-to-r from-dark-primary via-dark-secondary to-dark-primary text-light-primary overflow-hidden',
+        'h-[100dvh] bg-gradient-to-r from-dark-primary via-dark-secondary to-dark-primary text-light-primary overflow-hidden',
         className
       )}
     >
@@ -34,10 +34,10 @@ const Hero = ({ className }: IClassName): ReactElement => {
             <p>Právě máme otevřeno</p>
           </div>
           <div className="flex gap-4">
-            <button className="bg-accent px-9 py-3 text-center w-fit rounded-3xl drop-shadow-lg">
+            <button className="bg-accent px-6 py-2 md:px-9 md:py-3 text-center w-fit rounded-3xl drop-shadow-lg">
               Denní menu
             </button>
-            <button className="bg-transparent border-white border-2 px-9 py-3 text-center w-fit rounded-3xl drop-shadow-lg">
+            <button className="bg-transparent border-white border-2 px-6 py-2 md:px-9 md:py-3 text-center w-fit rounded-3xl drop-shadow-lg">
               Jak k nám?
             </button>
           </div>
@@ -58,7 +58,6 @@ const Hero = ({ className }: IClassName): ReactElement => {
             <div className="relative w-[300px] h-[300px] md:w-[750px] md:h-[750px] flex-shrink-0 fade-in-delayed">
               <Image
                 fill
-                priority
                 src={`/assets/pizza/pinsa-homepage-0${number}.png`}
                 alt="pizza"
                 style={{ objectFit: 'contain' }}

@@ -40,9 +40,11 @@ export default function NavigationMobile() {
           } absolute z-50 flex flex-col gap-4 items-center self-end py-8 font-bold rounded-lg
          bg-neutral-200 text-neutral-900 sm:w-auto sm:self-center left-6 right-6 drop-shadow-md mx-auto md:mx-8`}
         >
-          <a href="#about">O mně</a>
+          <a href="#about">O nás</a>
           <span className="w-4/5 mx-auto border border-solid border-b-1 border-gray-300 drop-shadow-sm"></span>
-          <a href="#projects">Projekty</a>
+          <a href="#projects">Denní menu</a>
+          <span className="w-4/5 mx-auto border border-solid border-b-1 border-gray-300 drop-shadow-sm"></span>
+          <a href="#contacts">Jídelní lístek</a>
           <span className="w-4/5 mx-auto border border-solid border-b-1 border-gray-300 drop-shadow-sm"></span>
           <a href="#contacts">Kontakty</a>
         </div>

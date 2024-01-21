@@ -80,7 +80,7 @@
 
 .fade-in-delayed {
   opacity: 0;
-  animation: fadeIn 1s ease-in-out 1.75s forwards;
+  animation: fadeIn 0.1s ease-in-out 0.9s forwards;
 }
 
 @keyframes fadeIn {
