@@ -3,7 +3,7 @@ import { ReactElement } from 'react';
 
 const NavigationDesktop = (): ReactElement => {
   return (
-    <nav className="hidden lg:block">
+    <nav className="hidden lg:block ml-auto">
       <ul className="gap-6 hidden md:flex">
         <li>
           <Link className="font-semibold cursor-pointer" href={'/o-nas'}>

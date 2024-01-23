@@ -42,10 +42,10 @@ const Hero = ({ className }: IClassName): ReactElement => {
             </button>
           </div>
         </div>
-        <div className="w-full md:w-2/3 flex items-center justify-center md:items-end md:justify-end -mt-32 md:mt-0">
-          <div className="relative -rotate-90 md:-rotate-45 pr-24 md:p-0">
+        <div className="w-full md:w-2/3 flex items-start justify-center md:items-end md:justify-end">
+          <div className="relative -rotate-90 md:-rotate-45">
             <div className="absolute">
-              <div className="relative w-[300px] h-[300px] md:w-[750px] md:h-[750px] flex-shrink-0 animate-into-view-mobile md:animate-into-view-desktop">
+              <div className="relative w-[250px] h-[250px] md:w-[750px] md:h-[750px] flex-shrink-0 animate-into-view-mobile md:animate-into-view-desktop">
                 <Image
                   fill
                   priority
@@ -55,7 +55,7 @@ const Hero = ({ className }: IClassName): ReactElement => {
                 />
               </div>
             </div>
-            <div className="relative w-[300px] h-[300px] md:w-[750px] md:h-[750px] flex-shrink-0 fade-in-delayed">
+            <div className="relative w-[250px] h-[250px] md:w-[750px] md:h-[750px] flex-shrink-0 fade-in-delayed">
               <Image
                 fill
                 src={`/assets/pizza/pinsa-homepage-0${number}.png`}

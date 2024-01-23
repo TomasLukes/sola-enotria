@@ -9,7 +9,7 @@ export default function NavigationMobile() {
   }
 
   return (
-    <nav className="text-xl font-medium">
+    <nav className="text-xl font-medium lg:hidden">
       <div className="container mx-auto flex items-center justify-end py-6 md:py-9">
         <button
           id="menu-btn"
