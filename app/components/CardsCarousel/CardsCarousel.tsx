@@ -2,11 +2,12 @@
 
 import * as React from 'react';
 import clsx from 'clsx';
-import useEmblaCardsCarousel, {
-  type EmblaCarouselType as CardsCarouselApi,
-  type EmblaOptionsType as CardsCarouselOptions,
-  type EmblaPluginType as CardsCarouselPlugin,
-} from 'embla-carousel-react';
+import useEmblaCardsCarousel, { type UseEmblaCarouselType } from 'embla-carousel-react';
+
+type CardsCarouselApi = UseEmblaCarouselType[1];
+type UseCarouselParameters = Parameters<typeof useEmblaCardsCarousel>;
+type CardsCarouselOptions = UseCarouselParameters[0];
+type CardsCarouselPlugin = UseCarouselParameters[1];
 
 type CardsCarouselProps = {
   opts?: CardsCarouselOptions;
@@ -40,13 +41,10 @@ const CardsCarousel = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & CardsCarouselProps
 >(({ orientation = 'horizontal', opts, setApi, plugins, className, children, ...props }, ref) => {
-  const [CardsCarouselRef, api] = useEmblaCardsCarousel(
-    {
-      ...opts,
-      axis: orientation === 'horizontal' ? 'x' : 'y',
-    },
-    plugins
-  );
+  const [CardsCarouselRef, api] = useEmblaCardsCarousel({
+    ...opts,
+    axis: orientation === 'horizontal' ? 'x' : 'y',
+  });
   const [canScrollPrev, setCanScrollPrev] = React.useState(false);
   const [canScrollNext, setCanScrollNext] = React.useState(false);
 
