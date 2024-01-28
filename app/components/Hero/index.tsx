@@ -1,4 +1,5 @@
 'use client';
+
 import clsx from 'clsx';
 import Image from 'next/image';
 import { ReactElement, useState, useEffect } from 'react';
@@ -16,10 +17,7 @@ const Hero = ({ className }: IClassName): ReactElement => {
 
   return (
     <section
-      className={clsx(
-        'h-[100dvh] bg-gradient-to-r from-dark-primary via-dark-secondary to-dark-primary text-light-primary overflow-hidden',
-        className
-      )}
+      className={clsx('h-[100dvh] gradient-dark text-light-primary overflow-hidden', className)}
     >
       <div className="container-base flex flex-col md:flex-row gap-8">
         <div className="w-full md:w-1/2 flex flex-col gap-4 justify-start md:pt-24 z-40">
