@@ -5,8 +5,11 @@ import {
   CardsCarouselContent,
   CardsCarouselItem,
 } from '../CardsCarousel/CardsCarousel';
+import ImageModal from '../ImageModal/ImageModal';
 
 const AboutUs = ({ className }: IClassName) => {
+  const numberOfImages = Array.from({ length: 8 });
+
   return (
     <section className={clsx('bg-grain bg-cover', className)}>
       <div>
@@ -25,86 +28,13 @@ const AboutUs = ({ className }: IClassName) => {
           </div>
           <CardsCarousel className="w-full lg:hidden">
             <CardsCarouselContent>
-              <CardsCarouselItem>
-                <div className="relative w-[250px] h-[250px] rounded-md shadow-lg overflow-hidden">
-                  <Image
-                    fill
-                    src="/assets/restaurant/interier-01.jpg"
-                    alt="Sola Enotria interier"
-                    objectFit="cover"
-                  />
-                </div>
-              </CardsCarouselItem>
-              <CardsCarouselItem>
-                <div className="relative w-[250px] h-[250px] rounded-md shadow-lg overflow-hidden">
-                  <Image
-                    fill
-                    src="/assets/restaurant/interier-02.jpg"
-                    alt="Sola Enotria interier"
-                    objectFit="cover"
-                  />
-                </div>
-              </CardsCarouselItem>
-              <CardsCarouselItem>
-                <div className="relative w-[250px] h-[250px] rounded-md shadow-lg overflow-hidden">
-                  <Image
-                    fill
-                    src="/assets/restaurant/interier-03.jpg"
-                    alt="Sola Enotria interier"
-                    objectFit="cover"
-                  />
-                </div>
-              </CardsCarouselItem>
-              <CardsCarouselItem>
-                <div className="relative w-[250px] h-[250px] rounded-md shadow-lg overflow-hidden">
-                  <Image
-                    fill
-                    src="/assets/restaurant/interier-04.jpg"
-                    alt="Sola Enotria interier"
-                    objectFit="cover"
-                  />
-                </div>
-              </CardsCarouselItem>
-              <CardsCarouselItem>
-                <div className="relative w-[250px] h-[250px] rounded-md shadow-lg overflow-hidden">
-                  <Image
-                    fill
-                    src="/assets/restaurant/interier-05.jpg"
-                    alt="Sola Enotria interier"
-                    objectFit="cover"
-                  />
-                </div>
-              </CardsCarouselItem>
-              <CardsCarouselItem>
-                <div className="relative w-[250px] h-[250px] rounded-md shadow-lg overflow-hidden">
-                  <Image
-                    fill
-                    src="/assets/restaurant/interier-06.jpg"
-                    alt="Sola Enotria interier"
-                    objectFit="cover"
-                  />
-                </div>
-              </CardsCarouselItem>
-              <CardsCarouselItem>
-                <div className="relative w-[250px] h-[250px] rounded-md shadow-lg overflow-hidden">
-                  <Image
-                    fill
-                    src="/assets/restaurant/interier-07.jpg"
-                    alt="Sola Enotria interier"
-                    objectFit="cover"
-                  />
-                </div>
-              </CardsCarouselItem>
-              <CardsCarouselItem>
-                <div className="relative w-[250px] h-[250px] rounded-md shadow-lg overflow-hidden">
-                  <Image
-                    fill
-                    src="/assets/restaurant/interier-08.jpg"
-                    alt="Sola Enotria interier"
-                    objectFit="cover"
-                  />
-                </div>
-              </CardsCarouselItem>
+              {numberOfImages.map((_, index) => {
+                return (
+                  <CardsCarouselItem key={`CardsCarousel-Image-${index}`}>
+                    <ImageModal imgSrc={`/assets/restaurant/interier-0${index + 1}.jpg`} />
+                  </CardsCarouselItem>
+                );
+              })}
             </CardsCarouselContent>
           </CardsCarousel>
         </div>
