@@ -4,7 +4,7 @@
 
 @layer components {
   .container-base {
-    @apply w-full max-w-7xl mx-auto px-4 lg:px-8;
+    @apply w-full max-w-6xl mx-auto px-4 lg:px-8;
   }
 
   .container-full {
@@ -20,7 +20,7 @@
   }
 
   .heading {
-    @apply text-3xl md:text-5xl font-bold tracking-tighter;
+    @apply text-3xl md:text-5xl font-medium tracking-tighter;
   }
 
   .subheading {
@@ -28,7 +28,7 @@
   }
 
   .paragraph {
-    @apply text-sm md:text-base font-normal;
+    @apply text-base md:text-lg font-normal;
   }
 
   .paragraph-small {
