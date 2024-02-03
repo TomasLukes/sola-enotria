@@ -2,53 +2,53 @@
 
 import * as React from 'react';
 import clsx from 'clsx';
-import useEmblaCardsCarousel, { type UseEmblaCarouselType } from 'embla-carousel-react';
+import useEmblaImageCarousel, { type UseEmblaCarouselType } from 'embla-carousel-react';
 
-type CardsCarouselApi = UseEmblaCarouselType[1];
-type UseCarouselParameters = Parameters<typeof useEmblaCardsCarousel>;
-type CardsCarouselOptions = UseCarouselParameters[0];
-type CardsCarouselPlugin = UseCarouselParameters[1];
+type ImageCarouselApi = UseEmblaCarouselType[1];
+type UseCarouselParameters = Parameters<typeof useEmblaImageCarousel>;
+type ImageCarouselOptions = UseCarouselParameters[0];
+type ImageCarouselPlugin = UseCarouselParameters[1];
 
-type CardsCarouselProps = {
-  opts?: CardsCarouselOptions;
-  plugins?: CardsCarouselPlugin[];
+type ImageCarouselProps = {
+  opts?: ImageCarouselOptions;
+  plugins?: ImageCarouselPlugin[];
   orientation?: 'horizontal' | 'vertical';
-  setApi?: (api: CardsCarouselApi) => void;
+  setApi?: (api: ImageCarouselApi) => void;
 };
 
-type CardsCarouselContextProps = {
-  CardsCarouselRef: ReturnType<typeof useEmblaCardsCarousel>[0];
-  api: ReturnType<typeof useEmblaCardsCarousel>[1];
+type ImageCarouselContextProps = {
+  ImageCarouselRef: ReturnType<typeof useEmblaImageCarousel>[0];
+  api: ReturnType<typeof useEmblaImageCarousel>[1];
   scrollPrev: () => void;
   scrollNext: () => void;
   canScrollPrev: boolean;
   canScrollNext: boolean;
-} & CardsCarouselProps;
+} & ImageCarouselProps;
 
-const CardsCarouselContext = React.createContext<CardsCarouselContextProps | null>(null);
+const ImageCarouselContext = React.createContext<ImageCarouselContextProps | null>(null);
 
-const useCardsCarousel = (): CardsCarouselContextProps => {
-  const context = React.useContext(CardsCarouselContext);
+const useImageCarousel = (): ImageCarouselContextProps => {
+  const context = React.useContext(ImageCarouselContext);
 
   if (!context) {
-    throw new Error('useCardsCarousel must be used within a <CardsCarousel />');
+    throw new Error('useImageCarousel must be used within a <ImageCarousel />');
   }
 
   return context;
 };
 
-const CardsCarousel = React.forwardRef<
+const ImageCarousel = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement> & CardsCarouselProps
+  React.HTMLAttributes<HTMLDivElement> & ImageCarouselProps
 >(({ orientation = 'horizontal', opts, setApi, plugins, className, children, ...props }, ref) => {
-  const [CardsCarouselRef, api] = useEmblaCardsCarousel({
+  const [ImageCarouselRef, api] = useEmblaImageCarousel({
     ...opts,
     axis: orientation === 'horizontal' ? 'x' : 'y',
   });
   const [canScrollPrev, setCanScrollPrev] = React.useState(false);
   const [canScrollNext, setCanScrollNext] = React.useState(false);
 
-  const onSelect = React.useCallback((api: CardsCarouselApi) => {
+  const onSelect = React.useCallback((api: ImageCarouselApi) => {
     if (!api) {
       return;
     }
@@ -101,9 +101,9 @@ const CardsCarousel = React.forwardRef<
   }, [api, onSelect]);
 
   return (
-    <CardsCarouselContext.Provider
+    <ImageCarouselContext.Provider
       value={{
-        CardsCarouselRef,
+        ImageCarouselRef,
         api: api,
         opts,
         orientation: orientation || (opts?.axis === 'y' ? 'vertical' : 'horizontal'),
@@ -118,23 +118,23 @@ const CardsCarousel = React.forwardRef<
         onKeyDownCapture={handleKeyDown}
         className={clsx('relative', className)}
         role="region"
-        aria-roledescription="CardsCarousel"
+        aria-roledescription="ImageCarousel"
         {...props}
       >
         {children}
       </div>
-    </CardsCarouselContext.Provider>
+    </ImageCarouselContext.Provider>
   );
 });
-CardsCarousel.displayName = 'CardsCarousel';
+ImageCarousel.displayName = 'ImageCarousel';
 
-const CardsCarouselContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+const ImageCarouselContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => {
-    const { CardsCarouselRef, orientation } = useCardsCarousel();
+    const { ImageCarouselRef, orientation } = useImageCarousel();
 
     return (
       <div
-        ref={CardsCarouselRef}
+        ref={ImageCarouselRef}
         className="overflow-x-hidden overflow-y-visible lg:overflow-visible"
       >
         <div
@@ -146,11 +146,11 @@ const CardsCarouselContent = React.forwardRef<HTMLDivElement, React.HTMLAttribut
     );
   }
 );
-CardsCarouselContent.displayName = 'CardsCarouselContent';
+ImageCarouselContent.displayName = 'ImageCarouselContent';
 
-const CardsCarouselItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+const ImageCarouselItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => {
-    const { orientation } = useCardsCarousel();
+    const { orientation } = useImageCarousel();
 
     return (
       <div
@@ -167,6 +167,6 @@ const CardsCarouselItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<
     );
   }
 );
-CardsCarouselItem.displayName = 'CardsCarouselItem';
+ImageCarouselItem.displayName = 'ImageCarouselItem';
 
-export { CardsCarousel, type CardsCarouselApi, CardsCarouselContent, CardsCarouselItem };
+export { ImageCarousel, type ImageCarouselApi, ImageCarouselContent, ImageCarouselItem };

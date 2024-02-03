@@ -1,17 +1,9 @@
 import clsx from 'clsx';
-import Image from 'next/image';
-import {
-  CardsCarousel,
-  CardsCarouselContent,
-  CardsCarouselItem,
-} from '../CardsCarousel/CardsCarousel';
-import ImageModal from '../ImageModal/ImageModal';
+import ImageGallery from '@/app/components/ImageGallery/ImageGallery';
 
 const AboutUs = ({ className }: IClassName) => {
-  const numberOfImages = Array.from({ length: 8 });
-
   return (
-    <section className={clsx('bg-grain bg-cover overflow-hidden', className)}>
+    <section className={clsx('overflow-hidden', className)}>
       <div>
         <div className="h-[100dvh] py-16 md:py-32 lg:py-40 flex justify-start flex-col gap-5 md:gap-8">
           <div className="container-base flex flex-col md:flex-row">
@@ -27,17 +19,7 @@ const AboutUs = ({ className }: IClassName) => {
               </p>
             </div>
           </div>
-          <CardsCarousel className="lg:container-base w-full mt-8 md:mt-12">
-            <CardsCarouselContent>
-              {numberOfImages.map((_, index) => {
-                return (
-                  <CardsCarouselItem key={`CardsCarousel-Image-${index}`}>
-                    <ImageModal imgSrc={`/assets/restaurant/interier-0${index + 1}.jpg`} />
-                  </CardsCarouselItem>
-                );
-              })}
-            </CardsCarouselContent>
-          </CardsCarousel>
+          <ImageGallery />
         </div>
       </div>
     </section>
