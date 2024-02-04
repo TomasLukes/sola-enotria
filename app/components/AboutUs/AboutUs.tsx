@@ -5,7 +5,7 @@ const AboutUs = ({ className }: IClassName) => {
   return (
     <section className={clsx('overflow-hidden', className)}>
       <div>
-        <div className="h-[100dvh] py-16 md:py-32 lg:py-40 flex justify-start flex-col gap-5 md:gap-8">
+        <div className="h-screen py-16 md:py-32 lg:py-40 flex justify-start flex-col gap-5 md:gap-8">
           <div className="container-base flex flex-col md:flex-row">
             <h3 className="w-full md:w-1/3 heading underline decoration-accent pb-4">O nás</h3>
             <div className="w-full md:w-2/3">

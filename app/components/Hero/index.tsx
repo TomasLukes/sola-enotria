@@ -3,6 +3,7 @@
 import clsx from 'clsx';
 import Image from 'next/image';
 import { ReactElement, useState, useEffect } from 'react';
+import Button from '../UI/Button';
 
 const Hero = ({ className }: IClassName): ReactElement => {
   const [number, setNumber] = useState(1);
@@ -32,12 +33,8 @@ const Hero = ({ className }: IClassName): ReactElement => {
             <p>Právě máme otevřeno</p>
           </div>
           <div className="flex gap-4">
-            <button className="bg-accent px-6 py-2 md:px-9 md:py-3 text-center w-fit rounded-3xl drop-shadow-lg">
-              Denní menu
-            </button>
-            <button className="bg-transparent border-white border-2 px-6 py-2 md:px-9 md:py-3 text-center w-fit rounded-3xl drop-shadow-lg">
-              Jak k nám?
-            </button>
+            <Button text="Denní menu" variant="primary" />
+            <Button text="Jak k nám?" variant="tertinary" />
           </div>
         </div>
         <div className="w-full md:w-2/3 flex items-start justify-center md:items-end md:justify-end">

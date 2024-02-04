@@ -13,7 +13,7 @@ const MenuItem = ({
         <p className="text-base font-medium">{heading}</p>
         {Boolean(subheading) && <p className="text-sm font-light">{subheading}</p>}
       </span>
-      <p className="italic">{price},- Kč</p>
+      <p className="italic text-nowrap">{price},- Kč</p>
     </div>
   );
 };

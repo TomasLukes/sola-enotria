@@ -3,7 +3,7 @@ import { ArrowLeftCircleIcon } from '@heroicons/react/24/outline';
 
 const DailyMenuControls = () => {
   return (
-    <div className="w-[500px] mx-auto flex items-center justify-between mt-12">
+    <div className="w-full lg:w-[500px] mx-auto flex items-center justify-between">
       <button>
         <ArrowLeftCircleIcon className="w-8 h-8 text-white" />
       </button>
