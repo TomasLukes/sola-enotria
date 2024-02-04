@@ -4,7 +4,10 @@ import ImageModal from '../ImageCarousel/ImageModal/ImageModal';
 
 const ImageParallax = (): ReactElement => {
   return (
-    <div className="h-[800px] mt-20 relative">
+    <div className="container-full h-[800px] mt-20 relative">
+      <h3 className="absolute text-7xl font-bold text-accent bg-transaprent text-nowrap shadow-lg top-[200px] left-[800px] z-10">
+        SOLA ENOTRIA
+      </h3>
       <div className="absolute top-0 left-4">
         <ImageModal
           imgSrc={`/assets/restaurant/interier-01.jpg`}
@@ -17,13 +20,6 @@ const ImageParallax = (): ReactElement => {
           imgSrc={`/assets/restaurant/interier-02.jpg`}
           variant="desktop"
           className="h-[400px] w-[200px]"
-        />
-      </div>
-      <div className="absolute bottom-[50px] right-[250px]">
-        <ImageModal
-          imgSrc={`/assets/restaurant/interier-03.jpg`}
-          variant="desktop"
-          className="absolute h-[300px] w-[300px]"
         />
       </div>
       <div className="absolute bottom-0 left-[200px]">
@@ -54,7 +50,7 @@ const ImageParallax = (): ReactElement => {
           className="absolute h-[300px] w-[300px]"
         />
       </div>
-      <div className="absolute bottom-[-10px] right-[10px] ">
+      <div className="absolute bottom-[-100px] left-[1450px] -z-10">
         <ImageModal
           imgSrc={`/assets/restaurant/interier-08.jpg`}
           variant="desktop"
