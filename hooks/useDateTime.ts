@@ -1,9 +1,13 @@
 'use client';
 
-import { DateTime } from 'luxon';
+import dayjs from 'dayjs';
 
 const useDateTime = () => {
-  return DateTime.now();
+  const localDate = dayjs();
+
+  const dayOfWeek = localDate.get('day');
+
+  return { dayOfWeek };
 };
 
 export default useDateTime;

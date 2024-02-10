@@ -3,7 +3,7 @@ import ImageGallery from '@/app/components/ImageGallery/ImageGallery';
 
 const AboutUs = ({ className }: IClassName) => {
   return (
-    <section className={clsx('overflow-hidden', className)}>
+    <section id="o-nas" className={clsx('overflow-hidden', className)}>
       <div>
         <div className="h-screen py-16 md:py-32 lg:py-40 flex justify-start flex-col gap-5 md:gap-8">
           <div className="container-base flex flex-col md:flex-row">

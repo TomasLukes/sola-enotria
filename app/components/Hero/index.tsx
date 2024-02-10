@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import { ReactElement, useState, useEffect } from 'react';
 import Button from '../UI/Button';
+import Link from 'next/link';
 
 const Hero = ({ className }: IClassName): ReactElement => {
   const [number, setNumber] = useState(1);
@@ -18,6 +19,7 @@ const Hero = ({ className }: IClassName): ReactElement => {
 
   return (
     <section
+      id="hero"
       className={clsx('h-[100dvh] gradient-dark text-light-primary overflow-hidden', className)}
     >
       <div className="container-base flex flex-col md:flex-row gap-8">
@@ -33,7 +35,9 @@ const Hero = ({ className }: IClassName): ReactElement => {
             <p>Právě máme otevřeno</p>
           </div>
           <div className="flex gap-4">
-            <Button text="Denní menu" variant="primary" />
+            <Link href={'#poledni-menu'}>
+              <Button text="Polední menu" variant="primary" />
+            </Link>
             <Button text="Jak k nám?" variant="tertinary" />
           </div>
         </div>

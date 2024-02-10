@@ -5,12 +5,14 @@ import Button from '../UI/Button';
 import DailyMenuControls from './DailyMenuControls';
 import MenuItem from './MenuItem';
 import { useState } from 'react';
+import useDateTime from '@/hooks/useDateTime';
 
 const DailyMenu = () => {
-  const [selectedDay, setSelectedDay] = useState<number>(0);
+  const { dayOfWeek } = useDateTime();
+  const defaultSelectedDate = dayOfWeek > 5 ? 0 : dayOfWeek;
+  const [selectedDay, setSelectedDay] = useState<number>(defaultSelectedDate);
 
   const menuHeader = dailyMenuData[selectedDay]?.day;
-
   const menuItems = dailyMenuData[selectedDay]?.menuItems.map(({ name, description, price }) => (
     <MenuItem key={name} name={name} description={description} price={price} />
   ));
@@ -28,7 +30,10 @@ const DailyMenu = () => {
   };
 
   return (
-    <section className="container-base py-16 md:py-32 lg:py-40 flex justify-start flex-col gap-5 md:gap-8">
+    <section
+      id="poledni-menu"
+      className="container-base py-16 md:py-32 lg:py-40 flex justify-start flex-col gap-5 md:gap-8"
+    >
       <div className="flex flex-col md:flex-row">
         <h3 className="w-full md:w-1/3 heading underline decoration-accent pb-4">Polední menu</h3>
         <div className="w-full md:w-2/3">

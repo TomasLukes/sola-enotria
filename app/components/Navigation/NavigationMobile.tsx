@@ -1,4 +1,5 @@
 'use client';
+import { PhoneArrowUpRightIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 
 export default function NavigationMobile() {
@@ -37,16 +38,23 @@ export default function NavigationMobile() {
           id="menu"
           className={`${
             !mobileMenuOpen && 'hidden'
-          } absolute z-50 flex flex-col gap-4 items-center self-end py-8 font-bold rounded-lg
+          } absolute z-50 flex flex-col gap-4 items-start p-8 self-end py-8 font-bold rounded-lg
          bg-neutral-200 text-neutral-900 sm:w-auto sm:self-center left-6 right-6 drop-shadow-md mx-auto md:mx-8`}
         >
-          <a href="#about">O nás</a>
-          <span className="w-4/5 mx-auto border border-solid border-b-1 border-gray-300 drop-shadow-sm"></span>
-          <a href="#projects">Denní menu</a>
-          <span className="w-4/5 mx-auto border border-solid border-b-1 border-gray-300 drop-shadow-sm"></span>
-          <a href="#contacts">Jídelní lístek</a>
-          <span className="w-4/5 mx-auto border border-solid border-b-1 border-gray-300 drop-shadow-sm"></span>
-          <a href="#contacts">Kontakty</a>
+          <a href="#o-nas">O nás</a>
+          <span className="w-full border border-solid border-b-1 border-gray-300 drop-shadow-sm"></span>
+          <a href="#poledni-menu">Polední menu</a>
+          <span className="w-full border border-solid border-b-1 border-gray-300 drop-shadow-sm"></span>
+          <a href="/jidelni-listek">Jídelní lístek</a>
+          <span className="w-full border border-solid border-b-1 border-gray-300 drop-shadow-sm"></span>
+          <a href="#kontakty">Kontakty</a>
+          <span className="w-full border border-solid border-b-1 border-gray-300 drop-shadow-sm"></span>
+          <a className="flex items-center gap-2" href="tel:+420123456789">
+            <span className="rounded-full bg-accent p-2">
+              <PhoneArrowUpRightIcon className="w-5 h-5 stroke-white animate-pulse" />
+            </span>
+            +420 123 456 789
+          </a>
         </div>
       </div>
     </nav>
