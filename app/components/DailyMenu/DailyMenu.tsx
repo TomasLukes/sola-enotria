@@ -1,29 +1,32 @@
+'use client';
+
+import { dailyMenuData } from '@/app/content/dailyMenuData';
 import Button from '../UI/Button';
 import DailyMenuControls from './DailyMenuControls';
 import MenuItem from './MenuItem';
-
-const menuItemsData = [
-  {
-    heading: 'Gnocchi s kuřecím masem',
-    subheading: 'listový špenát, parmezán, smetanová omáčka',
-    price: 155,
-  },
-  {
-    heading: 'Hovězí rajská pečeně s těstovinou',
-    price: 159,
-  },
-  {
-    heading: 'Smažený květák',
-    subheading: 'vařené brambory, tatarka',
-    price: 149,
-  },
-];
-
-const menuItems = menuItemsData.map(({ heading, subheading, price }) => (
-  <MenuItem key={heading} heading={heading} subheading={subheading} price={price} />
-));
+import { useState } from 'react';
 
 const DailyMenu = () => {
+  const [selectedDay, setSelectedDay] = useState<number>(0);
+
+  const menuHeader = dailyMenuData[selectedDay]?.day;
+
+  const menuItems = dailyMenuData[selectedDay]?.menuItems.map(({ name, description, price }) => (
+    <MenuItem key={name} name={name} description={description} price={price} />
+  ));
+
+  const handlePreviousItem = () => {
+    if (selectedDay > 0) {
+      setSelectedDay((prev) => prev - 1);
+    }
+  };
+
+  const handleNextItem = () => {
+    if (selectedDay < 4) {
+      setSelectedDay((prev) => prev + 1);
+    }
+  };
+
   return (
     <section className="container-base py-16 md:py-32 lg:py-40 flex justify-start flex-col gap-5 md:gap-8">
       <div className="flex flex-col md:flex-row">
@@ -40,7 +43,11 @@ const DailyMenu = () => {
         </div>
       </div>
       <article className="gradient-dark w-full flex-col justify-between p-6 md:px-12 md:py-8 mt-8 md:mt-12 rounded-xl shadow-xl">
-        <DailyMenuControls />
+        <DailyMenuControls
+          header={menuHeader}
+          handleNextItem={handleNextItem}
+          handlePreviousItem={handlePreviousItem}
+        />
         <div className="my-8">{menuItems}</div>
         <div className="w-full flex justify-center">
           <Button text="Celý týden" variant="primary" className="text-white" />

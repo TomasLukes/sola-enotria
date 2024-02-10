@@ -1,17 +1,9 @@
-const MenuItem = ({
-  heading,
-  subheading,
-  price,
-}: {
-  heading: string;
-  subheading?: string;
-  price: number;
-}) => {
+const MenuItem = ({ name, description, price }: any) => {
   return (
     <div className="w-full flex items-start justify-between py-4 text-white">
       <span>
-        <p className="text-base font-medium">{heading}</p>
-        {Boolean(subheading) && <p className="text-sm font-light">{subheading}</p>}
+        <p className="text-base font-medium">{name}</p>
+        {Boolean(description) && <p className="text-sm font-light">{description}</p>}
       </span>
       <p className="italic text-nowrap">{price},- Kč</p>
     </div>

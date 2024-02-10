@@ -1,14 +1,15 @@
+'use client';
 import { ArrowRightCircleIcon } from '@heroicons/react/24/outline';
 import { ArrowLeftCircleIcon } from '@heroicons/react/24/outline';
 
-const DailyMenuControls = () => {
+const DailyMenuControls = ({ header, handlePreviousItem, handleNextItem }: any) => {
   return (
     <div className="w-full lg:w-[500px] mx-auto flex items-center justify-between">
-      <button>
+      <button onClick={handlePreviousItem}>
         <ArrowLeftCircleIcon className="w-8 h-8 text-white" />
       </button>
-      <p className="text-xl text-white">Pondělí 5.2.2024</p>
-      <button>
+      <p className="text-xl text-white">{`${header.dayName} ${header.date}`}</p>
+      <button onClick={handleNextItem}>
         <ArrowRightCircleIcon className="w-8 h-8 text-white" />
       </button>
     </div>
