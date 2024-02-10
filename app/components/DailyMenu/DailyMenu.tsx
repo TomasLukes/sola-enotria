@@ -42,15 +42,17 @@ const DailyMenu = () => {
           </p>
         </div>
       </div>
-      <article className="gradient-dark w-full flex-col justify-between p-6 md:px-12 md:py-8 mt-8 md:mt-12 rounded-xl shadow-xl">
-        <DailyMenuControls
-          header={menuHeader}
-          handleNextItem={handleNextItem}
-          handlePreviousItem={handlePreviousItem}
-        />
-        <div className="my-8">{menuItems}</div>
-        <div className="w-full flex justify-center">
-          <Button text="Celý týden" variant="primary" className="text-white" />
+      <article className="gradient-dark w-full flex h-[450px] lg:h-[450px] p-6 md:px-12 md:py-8 mt-8 md:mt-12 rounded-xl shadow-xl">
+        <div className="relative flex-col justify-between w-full">
+          <DailyMenuControls
+            header={menuHeader}
+            handleNextItem={handleNextItem}
+            handlePreviousItem={handlePreviousItem}
+          />
+          <div className="my-8">{menuItems}</div>
+          <div className="absolute bottom-0 w-full flex justify-center">
+            <Button text="Celý týden" variant="primary" className="text-white" />
+          </div>
         </div>
       </article>
     </section>
