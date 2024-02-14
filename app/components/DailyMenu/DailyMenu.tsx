@@ -33,7 +33,7 @@ const DailyMenu = () => {
   return (
     <section
       id="poledni-menu"
-      className="container-base py-16 md:py-32 lg:py-40 flex justify-start flex-col gap-5 md:gap-8"
+      className="container-base py-12 md:py-32 lg:py-40 flex justify-start flex-col gap-5 md:gap-8"
     >
       <div className="flex flex-col md:flex-row">
         <h3 className="w-full md:w-1/3 heading underline decoration-accent pb-4">Polední menu</h3>
