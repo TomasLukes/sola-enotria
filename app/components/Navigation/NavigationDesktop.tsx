@@ -21,8 +21,8 @@ const NavigationDesktop = (): ReactElement => {
           </Link>
         </li>
         <li>
-          <Link className="font-semibold cursor-pointer" href={'#kontakty'}>
-            Kontakty
+          <Link className="font-semibold cursor-pointer" href={'#kudy-k-nam'}>
+            Kudy k nám?
           </Link>
         </li>
       </ul>

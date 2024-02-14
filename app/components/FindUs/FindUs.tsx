@@ -2,9 +2,9 @@ import clsx from 'clsx';
 import { ReactElement } from 'react';
 import OpeningHours from './OpeningHours/OpeningHours';
 
-const Contacts = ({ className }: { className?: string }): ReactElement => {
+const FindUs = ({ className }: { className?: string }): ReactElement => {
   return (
-    <section id="kontakty" className={clsx('overflow-hidden', className)}>
+    <section id="kudy-k-nam" className={clsx('overflow-hidden', className)}>
       <div>
         <div className="container-base min-h-screen py-16 md:py-32 lg:py-40 flex justify-start flex-col gap-5 md:gap-8">
           <div className="flex flex-col md:flex-row">
@@ -40,4 +40,4 @@ const Contacts = ({ className }: { className?: string }): ReactElement => {
   );
 };
 
-export default Contacts;
+export default FindUs;

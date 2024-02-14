@@ -47,7 +47,7 @@ export default function NavigationMobile() {
           <span className="w-full border border-solid border-b-1 border-gray-300 drop-shadow-sm"></span>
           <a href="/jidelni-listek">Jídelní lístek</a>
           <span className="w-full border border-solid border-b-1 border-gray-300 drop-shadow-sm"></span>
-          <a href="#kontakty">Kontakty</a>
+          <a href="#kudy-k-nam">Kudy k nám?</a>
           <span className="w-full border border-solid border-b-1 border-gray-300 drop-shadow-sm"></span>
           <a className="flex items-center gap-2" href="tel:+420123456789">
             <span className="rounded-full bg-accent p-2">

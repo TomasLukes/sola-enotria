@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { ReactElement, useState, useEffect } from 'react';
 import Button from '../UI/Button';
 import Link from 'next/link';
+import OpenedStatus from './OpenedStatus';
 
 const Hero = ({ className }: IClassName): ReactElement => {
   const [number, setNumber] = useState(1);
@@ -30,15 +31,14 @@ const Hero = ({ className }: IClassName): ReactElement => {
             prvotřídními surovinami vytvářejí nezapomenutelný chuťový zážitek. Přijďte ochutnat,
             proč jsme nejlepší v Bohnicích!
           </p>
-          <div className="flex items-center gap-2">
-            <span className="rounded-full w-2 h-2 bg-green-500 animate-pulse"></span>
-            <p>Právě máme otevřeno</p>
-          </div>
+          <OpenedStatus />
           <div className="flex gap-4">
             <Link href={'#poledni-menu'}>
               <Button text="Polední menu" variant="primary" />
             </Link>
-            <Button text="Jak k nám?" variant="tertinary" />
+            <Link href={'#kudy-k-nam'}>
+              <Button text="Kudy k nám?" variant="tertinary" />
+            </Link>
           </div>
         </div>
         <div className="w-full md:w-2/3 flex items-start justify-center md:items-end md:justify-end">
