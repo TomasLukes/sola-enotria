@@ -9,7 +9,8 @@ import useDateTime from '@/hooks/useDateTime';
 
 const DailyMenu = () => {
   const { dayOfWeek } = useDateTime();
-  const defaultSelectedDate = dayOfWeek > 5 ? 0 : dayOfWeek;
+  const defaultSelectedDate = dayOfWeek > 4 ? 0 : dayOfWeek;
+
   const [selectedDay, setSelectedDay] = useState<number>(defaultSelectedDate);
 
   const menuHeader = dailyMenuData[selectedDay]?.day;
@@ -18,7 +19,7 @@ const DailyMenu = () => {
   ));
 
   const handlePreviousItem = () => {
-    if (selectedDay > 0) {
+    if (selectedDay > dayOfWeek) {
       setSelectedDay((prev) => prev - 1);
     }
   };
