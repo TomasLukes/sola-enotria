@@ -7,10 +7,11 @@ const Footer = (): ReactElement => {
   const { currentYear } = useDateTime();
 
   return (
-    <footer className="w-full gradient-dark flex items-center py-4 text-white">
-      <div className="container-base h-full border-t-2 border-light-primary flex items-center justify-between py-8">
-        <p className="paragraph">Sola Enotria • {currentYear.toString()}</p>
-        <p className="paragraph">
+    <footer className="w-full gradient-dark flex flex-col items-center text-white">
+      <span className="w-4/5 md:w-3/4 mx-auto h-0.5 bg-light-primary"></span>
+      <div className="container-base h-full flex items-center justify-between py-4 md:py-8">
+        <p className="paragraph-small">Sola Enotria • {currentYear.toString()}</p>
+        <p className="paragraph-small">
           Created by <Link href={'https://www.tomaslukes.com/'}>Tomas Lukes</Link>
         </p>
       </div>
