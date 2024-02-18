@@ -16,7 +16,9 @@ const config: Config = {
         'light-secondary': '#E2E2E2',
       },
       backgroundImage: {
-        grain: "url('/assets/backgrounds/grainy-texture.webp')",
+        grain1: "url('/assets/backgrounds/bg-grain-1.jpg')",
+        grain2: "url('/assets/backgrounds/bg-grain-3.jpg')",
+        grain3: "url('/assets/backgrounds/bg-grain-4.jpg')",
       },
       animation: {
         'into-view-desktop': 'into-view-desktop 0.7s linear',

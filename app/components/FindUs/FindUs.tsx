@@ -4,7 +4,10 @@ import OpeningHours from './OpeningHours/OpeningHours';
 
 const FindUs = ({ className }: { className?: string }): ReactElement => {
   return (
-    <section id="kudy-k-nam" className={clsx('overflow-hidden', className)}>
+    <section
+      id="kudy-k-nam"
+      className={clsx('overflow-hidden bg-grain3 bg-bottom bg-no-repeat bg-contain', className)}
+    >
       <div>
         <div className="container-base py-12 md:py-32 lg:py-40 flex justify-start flex-col gap-5 md:gap-8">
           <div className="flex flex-col md:flex-row">
