@@ -9,8 +9,13 @@ import useDateTime from '@/hooks/useDateTime';
 
 const DailyMenu = () => {
   const { dayOfWeek } = useDateTime();
-  const defaultSelectedDate = dayOfWeek > 4 ? 0 : dayOfWeek;
-
+  const defaultSelectedDate = () => {
+    if (dayOfWeek > 4 || dayOfWeek < 0) {
+      return 0;
+    } else {
+      return dayOfWeek;
+    }
+  };
   const [selectedDay, setSelectedDay] = useState<number>(defaultSelectedDate);
 
   const menuHeader = dailyMenuData[selectedDay]?.day;

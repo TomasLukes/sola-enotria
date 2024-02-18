@@ -8,8 +8,6 @@ const closedMessage = 'Právě máme zavřeno';
 
 const OpenedStatus = (): ReactElement => {
   const { currentHour } = useDateTime();
-  console.log(currentHour);
-
   const isOpened: boolean = currentHour > 10 && currentHour < 22;
 
   return (

@@ -8,7 +8,7 @@ const DailyMenuControls = ({ header, handlePreviousItem, handleNextItem }: any) 
       <button onClick={handlePreviousItem}>
         <ArrowLeftCircleIcon className="w-8 h-8 text-white" />
       </button>
-      <p className="text-xl text-white">{`${header.dayName} ${header.date}`}</p>
+      <p className="text-xl text-white">{`${header?.dayName} ${header?.date}`}</p>
       <button onClick={handleNextItem}>
         <ArrowRightCircleIcon className="w-8 h-8 text-white" />
       </button>
