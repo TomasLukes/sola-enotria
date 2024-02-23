@@ -38,7 +38,7 @@ export default function NavigationMobile() {
           id="menu"
           className={`${
             !mobileMenuOpen && 'hidden'
-          } absolute z-50 flex flex-col gap-4 items-start p-8 self-end py-8 font-bold rounded-lg
+          } absolute z-50 flex flex-col gap-4 items-start p-8 self-end py-8 rounded-lg paragraph font-medium
          bg-neutral-200 text-neutral-900 sm:w-auto sm:self-center left-6 right-6 drop-shadow-md mx-auto md:mx-8`}
         >
           <a href="#o-nas">O nás</a>
@@ -49,9 +49,9 @@ export default function NavigationMobile() {
           <span className="w-full border border-solid border-b-1 border-gray-300 drop-shadow-sm"></span>
           <a href="#kudy-k-nam">Kudy k nám?</a>
           <span className="w-full border border-solid border-b-1 border-gray-300 drop-shadow-sm"></span>
-          <a className="flex items-center gap-2" href="tel:+420123456789">
+          <a className="flex items-center gap-2 font-normal paragraph" href="tel:+420123456789">
             <span className="rounded-full bg-accent p-2">
-              <PhoneArrowUpRightIcon className="w-5 h-5 stroke-white animate-pulse" />
+              <PhoneArrowUpRightIcon className="w-4 h-4 stroke-white animate-pulse" />
             </span>
             +420 123 456 789
           </a>

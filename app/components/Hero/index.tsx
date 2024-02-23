@@ -21,7 +21,7 @@ const Hero = ({ className }: IClassName): ReactElement => {
   return (
     <section
       id="hero"
-      className={clsx('h-[100dvh] gradient-dark text-light-primary overflow-hidden', className)}
+      className={clsx('min-h-screen gradient-dark text-light-primary overflow-hidden', className)}
     >
       <div className="container-base flex flex-col md:flex-row gap-8">
         <div className="w-full md:w-1/2 flex flex-col gap-4 justify-start md:pt-24 z-40">
