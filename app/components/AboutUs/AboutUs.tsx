@@ -8,7 +8,7 @@ const AboutUs = ({ className }: IClassName) => {
       className={clsx('overflow-hidden bg-grain1 bg-no-repeat	bg-contain', className)}
     >
       <div>
-        <div className="h-screen py-12 md:py-32 lg:py-40 flex justify-start flex-col gap-5 md:gap-8">
+        <div className="py-12 md:py-32 lg:py-40 flex justify-start flex-col gap-5 md:gap-8">
           <div className="container-base flex flex-col md:flex-row">
             <h3 className="w-full md:w-1/3 heading underline decoration-accent pb-4">O nás</h3>
             <div className="w-full md:w-2/3">
