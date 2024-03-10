@@ -3,7 +3,7 @@
 import clsx from 'clsx';
 import Image from 'next/image';
 import { ReactElement, useState, useEffect } from 'react';
-import Button from '@/app/components/ui/Button';
+import Button from '@/app/component/UI/Button';
 import Link from 'next/link';
 import OpenedStatus from './OpenedStatus';
 

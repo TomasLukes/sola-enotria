@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { dailyMenuData } from '@/app/content/dailyMenuData';
-import Button from '@/app/components/ui/Button';
+import Button from '@/app/components/UI/Button';
 import DailyMenuControls from '@/app/components/DailyMenu/DailyMenuControls';
 import MenuItem from '@/app/components/DailyMenu/MenuItem';
 import useDateTime from '@/hooks/useDateTime';
