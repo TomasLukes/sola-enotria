@@ -28,7 +28,6 @@ const FindUs = ({ className }: { className?: string }): ReactElement => {
             </div>
           </div>
           <div className="flex flex-col md:flex-row gap-8 text-white">
-            <OpeningHours />
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2557.7933716771395!2d14.414829477143462!3d50.12758837153229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470bead92484e85d%3A0xdc77b846bf84237c!2sPIZZERIE%20SOLA%20ENOTRIA!5e0!3m2!1sen!2scz!4v1707649082552!5m2!1sen!2scz"
               className="w-full md:w-1/2 h-[350px] md:h-[500px] mx-auto border-none rounded-md"
@@ -36,6 +35,7 @@ const FindUs = ({ className }: { className?: string }): ReactElement => {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
+            <OpeningHours />
           </div>
         </div>
       </div>

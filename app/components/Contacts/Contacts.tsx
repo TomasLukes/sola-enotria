@@ -4,7 +4,7 @@ import { ReactElement } from 'react';
 const Contacts = (): ReactElement => {
   return (
     <section className="w-full gradient-dark text-white">
-      <div className="container-base pt-8 pb-4">
+      <div className="container-base py-8">
         <div>
           <h5 className="subheading pb-0.5 underline decoration-accent">Kontakty</h5>
           <span className="flex items-center gap-2">
