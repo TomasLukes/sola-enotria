@@ -1,7 +1,7 @@
 'use client';
 
 import { dailyMenuData } from '@/app/content/dailyMenuData';
-import Button from '../UI/Button';
+import Button from '../ui/Button';
 import DailyMenuControls from './DailyMenuControls';
 import MenuItem from './MenuItem';
 import { useState } from 'react';

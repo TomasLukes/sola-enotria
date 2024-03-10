@@ -5,7 +5,7 @@ const MenuItem = ({ name, description, price }: any) => {
         <p className="text-base font-medium">{name}</p>
         {Boolean(description) && <p className="text-sm font-light">{description}</p>}
       </span>
-      <p className="italic text-nowrap">{price},- Kč</p>
+      <p className="italic text-nowrap shrink-0">{price},- Kč</p>
     </div>
   );
 };
