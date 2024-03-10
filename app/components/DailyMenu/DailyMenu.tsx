@@ -1,10 +1,10 @@
 'use client';
 
-import { dailyMenuData } from '@/app/content/dailyMenuData';
-import Button from '../ui/Button';
-import DailyMenuControls from './DailyMenuControls';
-import MenuItem from './MenuItem';
 import { useState } from 'react';
+import { dailyMenuData } from '@/app/content/dailyMenuData';
+import Button from '@/app/components/ui/Button';
+import DailyMenuControls from '@/app/components/DailyMenu/DailyMenuControls';
+import MenuItem from '@/app/components/DailyMenu/MenuItem';
 import useDateTime from '@/hooks/useDateTime';
 
 const DailyMenu = () => {
