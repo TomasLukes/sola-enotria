@@ -11,7 +11,7 @@ export default function NavigationMobile() {
 
   return (
     <nav className="text-xl font-medium lg:hidden">
-      <div className="container mx-auto flex items-center justify-end py-6 md:py-9">
+      <div className="container mx-auto flex items-center justify-end py-4 md:py-8">
         <button
           id="menu-btn"
           aria-label="Mobile hamburger icon"
@@ -23,7 +23,7 @@ export default function NavigationMobile() {
           <div
             className={`${
               mobileMenuOpen ? 'open' : ''
-            } block hamburger lg:hidden focus:outline-none`}
+            }block hamburger lg:hidden focus:outline-none`}
           >
             <span className="hamburger-top"></span>
             <span className="hamburger-middle"></span>
