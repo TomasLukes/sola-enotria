@@ -9,7 +9,7 @@ const FindUs = ({ className }: { className?: string }): ReactElement => {
       className={clsx('overflow-hidden bg-grain3 bg-bottom bg-no-repeat bg-contain', className)}
     >
       <div>
-        <div className="container-base py-12 md:py-32 lg:py-40 flex justify-start flex-col gap-5 md:gap-8">
+        <div className="container-base py-24 md:py-48 flex justify-start flex-col gap-5 md:gap-8">
           <div className="flex flex-col md:flex-row">
             <h3 className="w-full md:w-1/2 heading underline decoration-accent pb-4">
               Kde nás najdete?
