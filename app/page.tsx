@@ -6,7 +6,7 @@ import Footer from '@/app/components/Footer/Footer';
 import FindUs from '@/app/components/FindUs/FindUs';
 import Contacts from '@/app/components/Contacts/Contacts';
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Header />
@@ -18,4 +18,6 @@ export default function Home() {
       <Footer />
     </>
   );
-}
+};
+
+export default Home;
