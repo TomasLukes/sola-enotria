@@ -4,50 +4,47 @@ import ImageModal from '../ImageCarousel/ImageModal/ImageModal';
 
 const ImageParallax = (): ReactElement => {
   return (
-    <div className="container-base h-[600px] mt-20 relative">
-      <h3 className="absolute text-7xl font-bold text-accent bg-transaprent text-nowrap top-[100px] left-[300px] z-20 drop-shadow-xl">
-        SOLA ENOTRIA
-      </h3>
-      <div className="absolute top-[-50px] left-[-100px]">
+    <div className="w-full max-w-8xl mx-auto px-4 lg:px-8 mt-20">
+      <div className="grid grid-cols-4 gap-2 overflow-hidden rounded-3xl">
         <ImageModal
           imgSrc={`/assets/restaurant/interier-01.jpg`}
           variant="desktop"
-          className="h-[300px] w-[350px]"
+          className="h-[300px] w-full"
         />
-      </div>
-      <div className="absolute top-[0px] left-[400px] z-10">
         <ImageModal
           imgSrc={`/assets/restaurant/interier-02.jpg`}
           variant="desktop"
-          className="h-[400px] w-[200px]"
+          className="h-[300px] w-full"
         />
-      </div>
-      <div className="absolute bottom-[200px] left-[100px]">
+        <ImageModal
+          imgSrc={`/assets/restaurant/interier-03.jpg`}
+          variant="desktop"
+          className="h-[300px] w-full"
+        />
         <ImageModal
           imgSrc={`/assets/restaurant/interier-04.jpg`}
           variant="desktop"
-          className="absolute h-[200px] w-[200px]"
+          className="h-[300px] w-full"
         />
-      </div>
-      <div className="absolute top-[50px] left-[450px]">
         <ImageModal
           imgSrc={`/assets/restaurant/interier-05.jpg`}
           variant="desktop"
-          className="absolute h-[400px] w-[400px]"
+          className="h-[300px] w-full"
         />
-      </div>
-      <div className="absolute top-[0px] right-[-50px]">
         <ImageModal
           imgSrc={`/assets/restaurant/interier-06.jpg`}
           variant="desktop"
-          className="absolute h-[400px] w-[300px]"
+          className="h-[300px] w-full"
         />
-      </div>
-      <div className="absolute bottom-[50px] right-[0px]">
+        <ImageModal
+          imgSrc={`/assets/restaurant/interier-07.jpg`}
+          variant="desktop"
+          className="h-[300px] w-full"
+        />
         <ImageModal
           imgSrc={`/assets/restaurant/interier-08.jpg`}
           variant="desktop"
-          className="absolute h-[300px] w-[300px]"
+          className="h-[300px] w-full"
         />
       </div>
     </div>

@@ -20,8 +20,8 @@ const ImageModal = ({
   return (
     <>
       <button
-        className={clsx('relative rounded-md shadow-lg overflow-hidden', className, {
-          'w-[250px] h-[250px]': variant === 'mobile',
+        className={clsx('relative shadow-lg overflow-hidden', className, {
+          'w-[250px] h-[250px] rounded-md': variant === 'mobile',
         })}
         onClick={toggleIsOpen}
       >
