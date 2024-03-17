@@ -6,7 +6,8 @@ const useDateTime = () => {
   const localDate = dayjs();
 
   const currentHour = localDate.get('hour');
-  const dayOfWeek = localDate.get('day') - 1;
+  const day = localDate.get('day');
+  const dayOfWeek = (day === 0 ? 7 : day) - 1;
   const currentYear = localDate.get('year');
 
   return { currentHour, dayOfWeek, currentYear };

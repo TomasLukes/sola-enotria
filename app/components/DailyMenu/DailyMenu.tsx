@@ -24,7 +24,7 @@ const DailyMenu = () => {
   ));
 
   const handlePreviousItem = () => {
-    if (selectedDay > dayOfWeek) {
+    if (selectedDay > 0) {
       setSelectedDay((prev) => prev - 1);
     }
   };
