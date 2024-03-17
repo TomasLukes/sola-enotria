@@ -90,7 +90,7 @@ export default function NavigationMobile() {
               <span className="rounded-full bg-accent p-2">
                 <PhoneArrowUpRightIcon className="w-4 h-4 stroke-white animate-pulse" />
               </span>
-              <p>+420 123 456 789</p>
+              <p>+420 773 510 277</p>
             </a>
           </li>
         </ul>

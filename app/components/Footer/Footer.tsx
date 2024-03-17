@@ -12,7 +12,14 @@ const Footer = (): ReactElement => {
       <div className="container-base h-full flex items-center justify-between py-4 md:py-8">
         <p className="paragraph-small">Sola Enotria • {currentYear.toString()}</p>
         <p className="paragraph-small">
-          Created by <Link href={'https://www.tomaslukes.com/'}>Tomas Lukes</Link>
+          Created by{' '}
+          <Link
+            href={'https://www.tomaslukes.com/'}
+            target="_blank"
+            className="hover:text-yellow-500 hover:scale-[102%]"
+          >
+            Tomas Lukes
+          </Link>
         </p>
       </div>
     </footer>
