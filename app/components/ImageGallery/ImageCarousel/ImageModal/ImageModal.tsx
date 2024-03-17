@@ -54,7 +54,12 @@ const ImageModal = ({
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full">
-                  <div className="relative w-full h-[250px] rounded-md shadow-lg overflow-hidden">
+                  <div
+                    className={clsx('relative rounded-md shadow-lg overflow-hidden', {
+                      'h-[250px]': variant === 'mobile',
+                      'h-[75vh]': variant === 'desktop',
+                    })}
+                  >
                     <Image
                       src={imgSrc}
                       alt="Sola Enotria interier"

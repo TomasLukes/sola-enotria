@@ -6,6 +6,7 @@ import DailyMenuControls from '@/app/components/DailyMenu/DailyMenuControls';
 import MenuItem from '@/app/components/DailyMenu/MenuItem';
 import useDateTime from '@/hooks/useDateTime';
 import Button from '../UI/Button';
+import Link from 'next/link';
 
 const DailyMenu = () => {
   const { dayOfWeek } = useDateTime();
@@ -59,9 +60,9 @@ const DailyMenu = () => {
               handlePreviousItem={handlePreviousItem}
             />
             <div className="my-8">{menuItems}</div>
-            <div className="absolute bottom-0 w-full flex justify-center">
+            <Link href={'/poledni-menu'} className="absolute bottom-0 w-full flex justify-center">
               <Button text="Celý týden" variant="primary" className="text-white" />
-            </div>
+            </Link>
           </div>
         </article>
       </div>
