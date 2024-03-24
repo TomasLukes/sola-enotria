@@ -2,7 +2,7 @@
 
 import { ReactElement } from 'react';
 
-import useDateTime from '@/hooks/useDateTime';
+import useDateTime from '@/app/lib/hooks/useDateTime';
 import { IOpeningHoursData, openingHoursData } from './openingHoursData';
 import OpeningHoursItem from './OpeningHoursItem';
 

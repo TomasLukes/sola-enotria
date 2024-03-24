@@ -8,7 +8,7 @@ import {
   ImageCarouselItem,
 } from '@/app/components/ImageGallery/ImageCarousel/ImageCarousel';
 import ImageModal from '@/app/components/ImageGallery/ImageCarousel/ImageModal/ImageModal';
-import { useWindowSize } from '@/hooks/useWindowSize';
+import { useWindowSize } from '@/app/lib/hooks/useWindowSize';
 import ImageParallax from '@/app/components/ImageGallery/ImageParallax/ImageParallax';
 
 const ImageGallery = (): ReactElement => {

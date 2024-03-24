@@ -9,42 +9,42 @@ const ImageParallax = (): ReactElement => {
         <ImageModal
           imgSrc={`/assets/restaurant/interier-01.jpg`}
           variant="desktop"
-          className="h-[300px] w-full"
+          className="h-[300px] w-full hover:scale-[101%]"
         />
         <ImageModal
           imgSrc={`/assets/restaurant/interier-02.jpg`}
           variant="desktop"
-          className="h-[300px] w-full"
+          className="h-[300px] w-full hover:scale-[101%]"
         />
         <ImageModal
           imgSrc={`/assets/restaurant/interier-03.jpg`}
           variant="desktop"
-          className="h-[300px] w-full"
+          className="h-[300px] w-full hover:scale-[101%]"
         />
         <ImageModal
           imgSrc={`/assets/restaurant/interier-04.jpg`}
           variant="desktop"
-          className="h-[300px] w-full"
+          className="h-[300px] w-full hover:scale-[101%]"
         />
         <ImageModal
           imgSrc={`/assets/restaurant/interier-05.jpg`}
           variant="desktop"
-          className="h-[300px] w-full"
+          className="h-[300px] w-full hover:scale-[101%]"
         />
         <ImageModal
           imgSrc={`/assets/restaurant/interier-06.jpg`}
           variant="desktop"
-          className="h-[300px] w-full"
+          className="h-[300px] w-full hover:scale-[101%]"
         />
         <ImageModal
           imgSrc={`/assets/restaurant/interier-07.jpg`}
           variant="desktop"
-          className="h-[300px] w-full"
+          className="h-[300px] w-full hover:scale-[101%]"
         />
         <ImageModal
           imgSrc={`/assets/restaurant/interier-08.jpg`}
           variant="desktop"
-          className="h-[300px] w-full"
+          className="h-[300px] w-full hover:scale-[101%]"
         />
       </div>
     </div>

@@ -2,7 +2,7 @@
 
 import { ReactElement } from 'react';
 import clsx from 'clsx';
-import useDateTime from '@/hooks/useDateTime';
+import useDateTime from '@/app/lib/hooks/useDateTime';
 const openedMessage = 'Právě máme otevřeno';
 const closedMessage = 'Právě máme zavřeno';
 
