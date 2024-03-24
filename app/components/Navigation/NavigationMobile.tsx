@@ -1,5 +1,6 @@
 'use client';
 import { PhoneArrowUpRightIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
 import { useState } from 'react';
 
 export default function NavigationMobile() {
@@ -42,47 +43,47 @@ export default function NavigationMobile() {
          bg-neutral-200 text-neutral-900 sm:w-auto sm:self-center left-6 right-6 drop-shadow-md mx-auto md:mx-8`}
         >
           <li>
-            <a
-              href="#o-nas"
+            <Link
+              href="/#o-nas"
               onClick={() => {
                 toggleMobileMenu();
               }}
             >
               O nás
-            </a>
+            </Link>
           </li>
           <span className="w-full border border-solid border-b-1 border-gray-300 drop-shadow-sm" />
           <li>
-            <a
-              href="#poledni-menu"
+            <Link
+              href="/#poledni-menu"
               onClick={() => {
                 toggleMobileMenu();
               }}
             >
               Polední menu
-            </a>
+            </Link>
           </li>
           <span className="w-full border border-solid border-b-1 border-gray-300 drop-shadow-sm" />
           <li>
-            <a
+            <Link
               href="/jidelni-listek"
               onClick={() => {
                 toggleMobileMenu();
               }}
             >
               Jídelní lístek
-            </a>
+            </Link>
           </li>
           <span className="w-full border border-solid border-b-1 border-gray-300 drop-shadow-sm" />
           <li>
-            <a
-              href="#kudy-k-nam"
+            <Link
+              href="/#kudy-k-nam"
               onClick={() => {
                 toggleMobileMenu();
               }}
             >
               Kudy k nám?
-            </a>
+            </Link>
           </li>
           <span className="w-full border border-solid border-b-1 border-gray-300 drop-shadow-sm" />
           <li>

@@ -1,8 +1,6 @@
 import { type NextRequest, NextResponse } from 'next/server';
 
 const middleware = (request: NextRequest): Response | undefined => {
-  console.log('TEST');
-
   if (
     request.nextUrl.pathname.startsWith('/admin') &&
     request.nextUrl.searchParams.get('allowed') !== 'true'

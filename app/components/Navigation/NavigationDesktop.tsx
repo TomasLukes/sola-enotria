@@ -8,7 +8,7 @@ const NavigationDesktop = (): ReactElement => {
         <li>
           <Link
             className="font-semibold cursor-pointer hover:text-yellow-500 hover:scale-[102%]"
-            href={'#o-nas'}
+            href={'/#o-nas'}
           >
             O nás
           </Link>
@@ -16,7 +16,7 @@ const NavigationDesktop = (): ReactElement => {
         <li>
           <Link
             className="font-semibold cursor-pointer hover:text-yellow-500 hover:scale-[102%]"
-            href={'#poledni-menu'}
+            href={'/#poledni-menu'}
           >
             Polední menu
           </Link>
@@ -32,7 +32,7 @@ const NavigationDesktop = (): ReactElement => {
         <li>
           <Link
             className="font-semibold cursor-pointer hover:text-yellow-500 hover:scale-[102%]"
-            href={'#kudy-k-nam'}
+            href={'/#kudy-k-nam'}
           >
             Kudy k nám?
           </Link>
