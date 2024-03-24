@@ -20,7 +20,7 @@ const ImageGallery = (): ReactElement => {
       {width > 768 ? (
         <ImageParallax />
       ) : (
-        <ImageCarousel className="lg:container-base w-full mt-8 md:mt-12">
+        <ImageCarousel className="lg:container-base w-full">
           <ImageCarouselContent>
             {numberOfImages.map((_, index) => {
               return (

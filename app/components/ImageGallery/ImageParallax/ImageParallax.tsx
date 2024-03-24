@@ -4,7 +4,7 @@ import ImageModal from '../ImageCarousel/ImageModal/ImageModal';
 
 const ImageParallax = (): ReactElement => {
   return (
-    <div className="w-full mx-auto px-4 lg:px-8 mt-20">
+    <div className="w-full mx-auto px-4 lg:px-8">
       <div className="max-w-[1600px] mx-auto grid grid-cols-4 gap-2 overflow-hidden rounded-3xl">
         <ImageModal
           imgSrc={`/assets/restaurant/interier-01.jpg`}

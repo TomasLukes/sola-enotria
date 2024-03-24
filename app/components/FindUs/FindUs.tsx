@@ -9,12 +9,12 @@ const FindUs = ({ className }: { className?: string }): ReactElement => {
       className={clsx('overflow-hidden bg-grain3 bg-bottom bg-no-repeat bg-contain', className)}
     >
       <div>
-        <div className="container-base py-24 md:py-48 flex justify-start flex-col gap-5 md:gap-8">
-          <div className="flex flex-col md:flex-row">
-            <h3 className="w-full md:w-1/2 heading underline decoration-accent pb-4">
+        <div className="container-base py-20 md:py-36 flex justify-start flex-col gap-10 md:gap-16">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-8">
+            <h3 className="w-full md:w-1/3 heading underline decoration-accent">
               Kde nás najdete?
             </h3>
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-2/3">
               <p className="paragraph pb-2">
                 <strong>MHD</strong> zastávka Krakov u obchodního centra. Možné alternativy:
                 Zhořelecká, Na Pazderce, Poliklinika Mazurská. Z metra Kobylisy: autobusy č. 102 (7
